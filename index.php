@@ -158,7 +158,7 @@ class ContentScroll extends Plugin
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
         // add container
-        $content .= '<div id="contentscroll">' . $value . '</Div>';
+        $content .= '<div id="contentscroll" style="height: 170px;">' . $value . '</Div>';
 
         // jQuery UI (Custom Download containing only Widget and Effects Core)
         // http://jqueryui.com/download
@@ -204,7 +204,13 @@ class ContentScroll extends Plugin
             '<script type="text/javascript">
                 $(document).ready(function () {
                     $("div#contentscroll").smoothDivScroll({
-                        autoScrollingMode: "onStart"
+                        hotSpotScrolling: true,
+                        hotSpotMouseDownSpeedBooster: 5,
+                        mousewheelScrolling: "allDirections",   // vertical, horizontal, allDirections
+                        touchScrolling: true,
+                        manualContinuousScrolling: true,
+                        autoScrollingMode: "onStart",           // onStart, auto
+                        autoScrollingDirection: "backAndForth"  // right, left, backAndForth, endlessLoopRight, endlessLoopLeft
                     });
                 });
             </script>'
