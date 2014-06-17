@@ -131,8 +131,8 @@ class ContentScroll extends Plugin
         $label = $this->_cms_lang->getLanguageValue('label');
 
         // get params
-        list($param_, $param_, $param_)
-            = $this->makeUserParaArray($value, false, '|');
+        // list($param_, $param_, $param_)
+        //     = $this->makeUserParaArray($value, false, '|');
 
         // get conf and set default
         $conf = array();
@@ -145,62 +145,70 @@ class ContentScroll extends Plugin
         // include jquery and ContentScroll javascript
         $syntax->insert_jquery_in_head('jquery');
 
-        // $syntax->insert_in_head(
-        //     '<!-- jQuery UI (Custom Download containing only Widget and Effects Core) -->
-        //      <!-- http://jqueryui.com/download -->'
-        //     . $this->PLUGIN_SELF_URL
-        //     . 'smoothDivScroll/jquery-ui-1.10.3.custom.min.js"
-        //         type="text/javascript">
-        //     </script>'
-        // );
 
         $syntax->insert_in_head(
-            '<!-- Latest version (3.1.4) of jQuery Mouse Wheel by Brandon Aaron -->
-             <!-- https://github.com/brandonaaron/jquery-mousewheel -->
-             <script type="text/javascript"
-                src="' . $this->PLUGIN_SELF_URL
-                . 'smoothDivScroll/jquery.mousewheel.min.js"
-                type="text/javascript">
-            </script>'
+            '<!-- the CSS for Smooth Div Scroll -->
+             <link rel="Stylesheet" type="text/css"
+                href="' . $this->PLUGIN_SELF_URL
+                . 'smoothDivScroll/css/smoothDivScroll.css" />'
         );
 
-        $syntax->insert_in_head(
-            '<!-- jQuery Kinectic (1.8.2) used for touch scrolling -->
-             <!-- https://github.com/davetayls/jquery.kinetic/ -->
-             <script type="text/javascript"
-                src="' . $this->PLUGIN_SELF_URL
-                . 'smoothDivScroll/jquery.kinetic.min.js"
-                type="text/javascript">
-            </script>'
-        );
-
-        $syntax->insert_in_head(
-            '<!-- Smooth Div Scroll 1.3 minified-->
-             <script type="text/javascript"
-                src="' . $this->PLUGIN_SELF_URL
-                . 'smoothDivScroll/jquery.smoothdivscroll-1.3-min.js"
-                type="text/javascript">
-            </script>'
-        );
-
-        $syntax->insert_in_head(
-            '<!-- Plugin initialization -->
-            <script type="text/javascript">
-                // Initialize the plugin with no custom options
-                $(document).ready(function () {
-                    // None of the options are set
-                    $("div#makeMeScrollable").smoothDivScroll({
-                        autoScrollingMode: "onStart"
-                    });
-                });
-            </script>'
-        );
 
         // initialize return content, begin plugin content
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
-        // do something awesome here! ...
+        // add container
+        $content .= '<div id="contentscroll">' . $value . '</Div>';
 
+        // jQuery UI (Custom Download containing only Widget and Effects Core)
+        // http://jqueryui.com/download
+        $content .=
+            '<script type="text/javascript"
+                src="' . $this->PLUGIN_SELF_URL
+                . 'smoothDivScroll/js/jquery-ui-1.10.3.custom.min.js"
+                type="text/javascript">
+            </script>'
+        ;
+
+        // Latest version (3.1.4) of jQuery Mouse Wheel by Brandon Aaron
+        // https://github.com/brandonaaron/jquery-mousewheel
+        $content .=
+            '<script type="text/javascript"
+                src="' . $this->PLUGIN_SELF_URL
+                . 'smoothDivScroll/js/jquery.mousewheel.min.js"
+                type="text/javascript">
+            </script>'
+        ;
+
+        // jQuery Kinectic (1.8.2) used for touch scrolling
+        // https://github.com/davetayls/jquery.kinetic/
+        $content .=
+            '<script type="text/javascript"
+                src="' . $this->PLUGIN_SELF_URL
+                . 'smoothDivScroll/js/jquery.kinetic.min.js"
+                type="text/javascript">
+            </script>'
+        ;
+
+        // Smooth Div Scroll 1.3 minified
+        $content .=
+            '<script type="text/javascript"
+                src="' . $this->PLUGIN_SELF_URL
+                . 'smoothDivScroll/js/jquery.smoothdivscroll-1.3-min.js"
+                type="text/javascript">
+            </script>'
+        ;
+
+        // Plugin initialization
+        $content .=
+            '<script type="text/javascript">
+                $(document).ready(function () {
+                    $("div#contentscroll").smoothDivScroll({
+                        autoScrollingMode: "onStart"
+                    });
+                });
+            </script>'
+        ;
         // end plugin content
         $content .= '<!-- END ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
