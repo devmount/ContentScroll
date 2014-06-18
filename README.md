@@ -3,7 +3,7 @@ ContentScroll
 
 A Plugin for moziloCMS 2.0
 
-This plugin draft can be used for easier moziloCMS plugin development.
+Makes content that is wider than containter width horizontal scrollable.
 
 ## Installation
 #### With moziloCMS installer
@@ -16,11 +16,11 @@ Installing a plugin manually requires FTP Access.
 - Go to the backend tab *Plugins* and activate the now listed new ContentScroll plugin
 
 ## Syntax
-```{ContentScroll|<param1>|<param2>}```
-Here comes the general description of the plugin tag.
+```{ContentScroll|<height>|<content>}```
+Inserts the scrollalble content.
 
-1. Parameter ```<param1>```: Short description of parameter 1.
-2. Parameter ```<param2>```: Short description of parameter 2.
+1. Parameter ```<height>```: Height of content slider in px
+2. Parameter ```<content>```: Content, that should be horizontal scrollable, e.g. thumbnails of an image gallery
 
 ## License
 This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE) or, at your choice, any further version.
