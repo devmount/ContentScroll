@@ -1,3 +1,34 @@
-tag1         = Gibt ... zurück.
-description  = Generiert ... <br /><br /><span class='plugindraft-bold'>Nutzung:</span><br /><span class='plugindraft-code'>{PARAM1}</span> Fügt ... ein.<br /><br /><span class='plugindraft-pre'>&lt;attribut&gt;: </span>Attributbeschreibung ... <span class='plugindraft-pre'>...</span><br /><br /><span class='plugindraft-bold'>Dokumentation:</span><br />Eine ausführliche Dokumentation ist auf <span class="plugindraft-italic">www.devmount.de</span> zu finden (siehe obenstehender Link).
-admin_header = {PARAM1} Plugin Konfiguration
+tag1                                           = Gibt horizontal scrollbaren Inhalt zurück.
+description                                    = Generiert horizontal scrollbaren Inhalt. <br /><br /><span class='contentscroll-bold'>Nutzung:</span><br /><span class='contentscroll-code'>{PARAM1}</span> Fügt den horizontal scrollbaren Inhalt ein.<br /><br /><span class='contentscroll-pre'>&lt;height&gt;: </span>Höhe des Inhalts in Pixeln (z.B. 200)<br /><span class='contentscroll-pre'>&lt;content&gt;: </span>Inhalt, welcher horizontal gescrollt werden soll (z.B. Thumbnails einer Bildergalerie)<br /><br /><span class='contentscroll-bold'>Dokumentation:</span><br />Eine ausführliche Dokumentation ist auf <span class="contentscroll-italic">devmount.de</span> zu finden (siehe obenstehender Link).
+admin_header                                   = {PARAM1} Plugin Konfiguration
+admin_navigation                               = Navigation
+admin_loop                                     = Schleife
+admin_scrolling                                = Scrollen
+config_hotSpotScrolling                        = Naviagtionspfeile links und rechts anzeigen
+config_hotSpotMouseDownSpeedBooster            = Vervielfachung der Geschwindigkeit bei Mausklick auf die Navigation
+config_hotSpotMouseDownSpeedBooster_1          = Kein Speed Booster
+config_hotSpotMouseDownSpeedBooster_2          = 2-fach
+config_hotSpotMouseDownSpeedBooster_3          = 3-fach
+config_hotSpotMouseDownSpeedBooster_4          = 4-fach
+config_hotSpotMouseDownSpeedBooster_5          = 5-fach
+config_hotSpotMouseDownSpeedBooster_6          = 6-fach
+config_hotSpotMouseDownSpeedBooster_7          = 7-fach
+config_hotSpotMouseDownSpeedBooster_8          = 8-fach
+config_hotSpotMouseDownSpeedBooster_9          = 9-fach
+config_hotSpotMouseDownSpeedBooster_10         = 10-fach
+config_mousewheelScrolling                     = Scrollen mit dem Mausrad
+config_mousewheelScrolling_vertical            = Vertikal
+config_mousewheelScrolling_horizontal          = Horizontal
+config_mousewheelScrolling_allDirections       = Alle Richtungen
+config_touchScrolling                          = Touch Scrollen (und Maus-Drag) aktivieren
+config_manualContinuousScrolling               = Unendliche Schleife aktivieren
+config_autoScrollingMode                       = Autoscroll Modus
+config_autoScrollingMode_                      = Deaktiviert
+config_autoScrollingMode_onStart               = onStart
+config_autoScrollingMode_auto                  = Auto
+config_autoScrollingDirection                  = Autoscroll Richtung
+config_autoScrollingDirection_right            = Rechts
+config_autoScrollingDirection_left             = Links
+config_autoScrollingDirection_backAndForth     = Vor und Zurück
+config_autoScrollingDirection_endlessLoopRight = Unendliche Schleife nach rechts
+config_autoScrollingDirection_endlessLoopLeft  = Unendliche Schleife nach links

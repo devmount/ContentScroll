@@ -1,3 +1,34 @@
-tag          = Returns ...
-description  = Generates ... <br /><br /><span class='plugindraft-bold'>Use:</span><br /><span class='plugindraft-code'>{PARAM1}</span> Inserts ...<br /><br /><span class='plugindraft-pre'>&lt;attribute&gt;: </span>description ... <span class='plugindraft-pre'>...</span><br /><br /><span class='plugindraft-bold'>Documentation:</span><br />A detailed documentation can be found on <span class='plugindraft-italic'>www.devmount.de </span> (link above).
-admin_header = {PARAM1} Plugin Configuration
+tag                                            = Returns horizontal scrollable content
+description                                    = Generates horizontal slider for scrolling oversized content.<br /><br /><span class='plugindraft-bold'>Use:</span><br /><span class='plugindraft-code'>{PARAM1}</span> Inserts horizontal scrollable content.<br /><br /><span class='plugindraft-pre'>&lt;height&gt;: </span>Height of content in px (e.g. 200)<br /><span class='plugindraft-pre'>&lt;content&gt;: </span>Content to make scrollable (e.g. thumbnails of an image gallery)<br /><br /><span class='plugindraft-bold'>Documentation:</span><br />A detailed documentation can be found on <span class='plugindraft-italic'>www.devmount.de </span> (link above).
+admin_header                                   = {PARAM1} Plugin Configuration
+admin_navigation                               = Navigation
+admin_loop                                     = Loop
+admin_scrolling                                = Scrolling
+config_hotSpotScrolling                        = Show navigation hot spots left and right
+config_hotSpotMouseDownSpeedBooster            = Speed booster per mouse click
+config_hotSpotMouseDownSpeedBooster_1          = No speed booster
+config_hotSpotMouseDownSpeedBooster_2          = 2 times
+config_hotSpotMouseDownSpeedBooster_3          = 3 times
+config_hotSpotMouseDownSpeedBooster_4          = 4 times
+config_hotSpotMouseDownSpeedBooster_5          = 5 times
+config_hotSpotMouseDownSpeedBooster_6          = 6 times
+config_hotSpotMouseDownSpeedBooster_7          = 7 times
+config_hotSpotMouseDownSpeedBooster_8          = 8 times
+config_hotSpotMouseDownSpeedBooster_9          = 9 times
+config_hotSpotMouseDownSpeedBooster_10         = 10 times
+config_mousewheelScrolling                     = Mousewheel scrolling
+config_mousewheelScrolling_vertical            = Vertical
+config_mousewheelScrolling_horizontal          = Horizontal
+config_mousewheelScrolling_allDirections       = All directions
+config_touchScrolling                          = Enable touch scrolling (and mouse dragging)
+config_manualContinuousScrolling               = Manual continuous scrolling
+config_autoScrollingMode                       = Auto scrolling mode
+config_autoScrollingMode_                      = Disabled
+config_autoScrollingMode_onStart               = onStart
+config_autoScrollingMode_auto                  = Auto
+config_autoScrollingDirection                  = Auto scrolling direction
+config_autoScrollingDirection_right            = Right
+config_autoScrollingDirection_left             = Left
+config_autoScrollingDirection_backAndForth     = Back and forth
+config_autoScrollingDirection_endlessLoopRight = Endless loop right
+config_autoScrollingDirection_endlessLoopLeft  = Endless loop left
