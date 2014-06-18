@@ -73,11 +73,10 @@ class ContentScroll extends Plugin
             'check',
         ),
         'hotSpotMouseDownSpeedBooster' => array(
-            '5',
-            'text',
-            '100',
-            '5',
-            "/^[0-9]{1,3}$/",
+            '3',
+            'select',
+            array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10'),
+            false,
         ),
         'mousewheelScrolling' => array(
             'allDirections',
@@ -96,7 +95,7 @@ class ContentScroll extends Plugin
         'autoScrollingMode' => array(
             '',
             'select',
-            array('onStart','auto'),
+            array('','onStart','auto'),
             false,
         ),
         'autoScrollingDirection' => array(
@@ -215,17 +214,20 @@ class ContentScroll extends Plugin
         // set configuration
         foreach ($conf as $key => $value) {
             $defaultconf = $this->_confdefault;
+            // quote selected values
             if ($defaultconf[$key][1] == 'select') {
                 $content .= $key . ': "' . $value . '",';
             } else {
                 $content .= $key . ': ' . $value . ',';
             }
         }
+        // remove last comma
         $content = substr($content, 0, -1);
         $content .= '});
                 });
             </script>'
         ;
+
         // end plugin content
         $content .= '<!-- END ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
@@ -346,20 +348,73 @@ class ContentScroll extends Plugin
         </li>
         <li class="mo-in-ul-li ui-widget-content contentscroll-admin-li">
             <div class="contentscroll-admin-subheader">'
-            . $this->_admin_lang->getLanguageValue('admin_test')
+            . $this->_admin_lang->getLanguageValue('admin_navigation')
             . '</div>
             <div class="contentscroll-single-conf">
-                {test1_text}
-                {test1_description}
+                {hotSpotScrolling_checkbox}
+                {hotSpotScrolling_description}
                 <span class="contentscroll-admin-default">
-                    [' . /*$this->_confdefault['test1'][0] .*/']
+                    [' . $this->_confdefault['hotSpotScrolling'][0] .']
                 </span>
             </div>
             <div class="contentscroll-single-conf">
-                {test2_text}
-                {test2_description}
+                <div class="contentscroll-col-4">
+                    {hotSpotMouseDownSpeedBooster_select}
+                </div>
+                {hotSpotMouseDownSpeedBooster_description}
                 <span class="contentscroll-admin-default">
-                    [' . /*$this->_confdefault['test2'][0] .*/']
+                    [' . $this->_confdefault['hotSpotMouseDownSpeedBooster'][0] .']
+                </span>
+            </div>
+        </li>
+        <li class="mo-in-ul-li ui-widget-content contentscroll-admin-li">
+            <div class="contentscroll-admin-subheader">'
+            . $this->_admin_lang->getLanguageValue('admin_loop')
+            . '</div>
+            <div class="contentscroll-single-conf">
+                {manualContinuousScrolling_checkbox}
+                {manualContinuousScrolling_description}
+                <span class="contentscroll-admin-default">
+                    [' . $this->_confdefault['manualContinuousScrolling'][0] .']
+                </span>
+            </div>
+        </li>
+        <li class="mo-in-ul-li ui-widget-content contentscroll-admin-li">
+            <div class="contentscroll-admin-subheader">'
+            . $this->_admin_lang->getLanguageValue('admin_scrolling')
+            . '</div>
+            <div class="contentscroll-single-conf">
+                {touchScrolling_checkbox}
+                {touchScrolling_description}
+                <span class="contentscroll-admin-default">
+                    [' . $this->_confdefault['touchScrolling'][0] .']
+                </span>
+            </div>
+            <div class="contentscroll-single-conf">
+                <div class="contentscroll-col-4">
+                    {mousewheelScrolling_select}
+                </div>
+                {mousewheelScrolling_description}
+                <span class="contentscroll-admin-default">
+                    [' . $this->_confdefault['mousewheelScrolling'][0] .']
+                </span>
+            </div>
+            <div class="contentscroll-single-conf">
+                <div class="contentscroll-col-4">
+                    {autoScrollingMode_select}
+                </div>
+                {autoScrollingMode_description}
+                <span class="contentscroll-admin-default">
+                    [' . $this->_confdefault['autoScrollingMode'][0] .']
+                </span>
+            </div>
+            <div class="contentscroll-single-conf">
+                <div class="contentscroll-col-4">
+                    {autoScrollingDirection_select}
+                </div>
+                {autoScrollingDirection_description}
+                <span class="contentscroll-admin-default">
+                    [' . $this->_confdefault['autoScrollingDirection'][0] .']
                 </span>
         ';
 
