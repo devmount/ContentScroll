@@ -50,7 +50,7 @@ class ContentScroll extends Plugin
     const PLUGIN_VERSION = 'v0.1.2014-06-dd';
     const MOZILO_VERSION = '2.0';
     private $_plugin_tags = array(
-        'tag1' => '{ContentScroll|type|<param1>|<param2>}',
+        'tag1' => '{ContentScroll|<height>|<content>}',
     );
 
     const LOGO_URL = 'http://media.devmount.de/logo_pluginconf.png';
@@ -131,8 +131,8 @@ class ContentScroll extends Plugin
         $label = $this->_cms_lang->getLanguageValue('label');
 
         // get params
-        // list($param_, $param_, $param_)
-        //     = $this->makeUserParaArray($value, false, '|');
+        list($param_height, $param_content)
+            = $this->makeUserParaArray($value, false, '|');
 
         // get conf and set default
         $conf = array();
@@ -142,10 +142,10 @@ class ContentScroll extends Plugin
                 : $this->settings->get($elem);
         }
 
-        // include jquery and ContentScroll javascript
+        // include jquery
         $syntax->insert_jquery_in_head('jquery');
 
-
+        // include smoothDivScroll CSS
         $syntax->insert_in_head(
             '<!-- the CSS for Smooth Div Scroll -->
              <link rel="Stylesheet" type="text/css"
@@ -153,12 +153,14 @@ class ContentScroll extends Plugin
                 . 'smoothDivScroll/css/smoothDivScroll.css" />'
         );
 
-
         // initialize return content, begin plugin content
         $content = '<!-- BEGIN ' . self::PLUGIN_TITLE . ' plugin content --> ';
 
         // add container
-        $content .= '<div id="contentscroll" style="height: 170px;">' . $value . '</Div>';
+        $content .=
+            '<div id="contentscroll" style="height: ' . $param_height . 'px;">'
+                . $param_content
+            . '</div>';
 
         // jQuery UI (Custom Download containing only Widget and Effects Core)
         // http://jqueryui.com/download
