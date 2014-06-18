@@ -68,41 +68,47 @@ class ContentScroll extends Plugin
      *      select   => default, type, descriptions, multiselect
      */
     private $_confdefault = array(
-        'text' => array(
-            'string',
+        'hotSpotScrolling' => array(
+            true,
+            'check',
+        ),
+        'hotSpotMouseDownSpeedBooster' => array(
+            '5',
             'text',
             '100',
             '5',
             "/^[0-9]{1,3}$/",
         ),
-        'textarea' => array(
-            'string',
-            'textarea',
-            '10',
-            '10',
-            "/^[a-zA-Z0-9]{1,10}$/",
+        'mousewheelScrolling' => array(
+            'allDirections',
+            'select',
+            array('vertical', 'horizontal', 'allDirections'),
+            false,
         ),
-        'password' => array(
-            'string',
-            'password',
-            '100',
-            '5',
-            "/^[a-zA-Z0-9]{8,20}$/",
-            true,
-        ),
-        'check' => array(
+        'touchScrolling' => array(
             true,
             'check',
         ),
-        'radio' => array(
-            'red',
-            'radio',
-            array('red', 'green', 'blue'),
+        'manualContinuousScrolling' => array(
+            true,
+            'check',
         ),
-        'select' => array(
-            'bike',
+        'autoScrollingMode' => array(
+            '',
             'select',
-            array('car','bike','plane'),
+            array('onStart','auto'),
+            false,
+        ),
+        'autoScrollingDirection' => array(
+            'backAndForth',
+            'select',
+            array(
+                'right',
+                'left',
+                'backAndForth',
+                'endlessLoopRight',
+                'endlessLoopLeft'
+            ),
             false,
         ),
     );
@@ -201,19 +207,22 @@ class ContentScroll extends Plugin
             </script>'
         ;
 
-        // Plugin initialization
+        // Smooth Div Scroll initialization
         $content .=
             '<script type="text/javascript">
                 $(document).ready(function () {
-                    $("div#contentscroll").smoothDivScroll({
-                        hotSpotScrolling: true,
-                        hotSpotMouseDownSpeedBooster: 5,
-                        mousewheelScrolling: "allDirections",   // vertical, horizontal, allDirections
-                        touchScrolling: true,
-                        manualContinuousScrolling: true,
-                        autoScrollingMode: "onStart",           // onStart, auto
-                        autoScrollingDirection: "backAndForth"  // right, left, backAndForth, endlessLoopRight, endlessLoopLeft
-                    });
+                    $("div#contentscroll").smoothDivScroll({';
+        // set configuration
+        foreach ($conf as $key => $value) {
+            $defaultconf = $this->_confdefault;
+            if ($defaultconf[$key][1] == 'select') {
+                $content .= $key . ': "' . $value . '",';
+            } else {
+                $content .= $key . ': ' . $value . ',';
+            }
+        }
+        $content = substr($content, 0, -1);
+        $content .= '});
                 });
             </script>'
         ;
