@@ -11,10 +11,11 @@
  * @package  PHP_MoziloPlugins
  * @author   HPdesigner <mail@devmount.de>
  * @license  GPL v3+
- * @version  GIT: v0.1.2014-06-dd
+ * @version  GIT: v0.1.2014-06-18
  * @link     https://github.com/devmount/ContentScroll
  * @link     http://devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html
- * @see      Verse
+ * @see      And the peace of God, which transcends all understanding, will guard
+ *           your hearts and your minds in Christ Jesus.
  *           – The Bible
  *
  * Plugin created by DEVMOUNT
@@ -47,7 +48,7 @@ class ContentScroll extends Plugin
     const PLUGIN_DOCU
         = 'http://devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html';
     const PLUGIN_TITLE   = 'ContentScroll';
-    const PLUGIN_VERSION = 'v0.1.2014-06-dd';
+    const PLUGIN_VERSION = 'v0.1.2014-06-18';
     const MOZILO_VERSION = '2.0';
     private $_plugin_tags = array(
         'tag1' => '{ContentScroll|<height>|<content>}',
