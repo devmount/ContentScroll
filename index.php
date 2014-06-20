@@ -140,6 +140,17 @@ class ContentScroll extends Plugin
         list($param_height, $param_content)
             = $this->makeUserParaArray($value, false, '|');
 
+        // check params
+        if ($param_height == '') {
+            $param_height = 100;
+        }
+        if ($param_content == '') {
+            return $this->throwMessage(
+                $this->_cms_lang->getLanguageValue('error_nocontent'),
+                'ERROR'
+            );
+        }
+
         // get conf and set default
         $conf = array();
         foreach ($this->_confdefault as $elem => $default) {
