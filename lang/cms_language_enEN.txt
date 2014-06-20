@@ -1,2 +1,2 @@
-error     = Error
-error_sth = ...
+error           = Error
+error_nocontent = No content to display was consigned.
