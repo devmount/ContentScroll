@@ -3,7 +3,7 @@
 */
 
 #contentscroll {
-    width: 100%;
+    width: inherit;
     position: relative;
 }
 
