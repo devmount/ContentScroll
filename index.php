@@ -10,7 +10,7 @@
  * @category PHP
  * @package  PHP_MoziloPlugins
  * @author   HPdesigner <mail@devmount.de>
- * @license  GPL v3+
+ * @license  GPL
  * @version  GIT: v0.1.2014-06-18
  * @link     https://github.com/devmount/ContentScroll
  * @link     http://devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html
@@ -34,7 +34,7 @@ if (!defined('IS_CMS')) {
  * @category PHP
  * @package  PHP_MoziloPlugins
  * @author   HPdesigner <mail@devmount.de>
- * @license  GPL v3+
+ * @license  GPL
  * @link     https://github.com/devmount/ContentScroll
  */
 class ContentScroll extends Plugin
