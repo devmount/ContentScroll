@@ -1,5 +1,6 @@
 tag1                                           = Gibt horizontal scrollbaren Inhalt zurück.
 description                                    = Generiert horizontal scrollbaren Inhalt. <br /><br /><span class='contentscroll-bold'>Nutzung:</span><br /><span class='contentscroll-code'>{PARAM1}</span> Fügt den horizontal scrollbaren Inhalt ein.<br /><br /><span class='contentscroll-pre'>&lt;height&gt;: </span>Höhe des Inhalts in Pixeln (z.B. 200)<br /><span class='contentscroll-pre'>&lt;content&gt;: </span>Inhalt, welcher horizontal gescrollt werden soll (z.B. Thumbnails einer Bildergalerie)<br /><br /><span class='contentscroll-bold'>Dokumentation:</span><br />Eine ausführliche Dokumentation ist auf <span class="contentscroll-italic">devmount.de</span> zu finden (siehe obenstehender Link).
+on_devmount                                    = auf devmount.de
 admin_header                                   = {PARAM1} Plugin Konfiguration
 admin_navigation                               = Navigation
 admin_loop                                     = Schleife

@@ -1,5 +1,6 @@
 tag                                            = Returns horizontal scrollable content
 description                                    = Generates horizontal slider for scrolling oversized content.<br /><br /><span class='plugindraft-bold'>Use:</span><br /><span class='plugindraft-code'>{PARAM1}</span> Inserts horizontal scrollable content.<br /><br /><span class='plugindraft-pre'>&lt;height&gt;: </span>Height of content in px (e.g. 200)<br /><span class='plugindraft-pre'>&lt;content&gt;: </span>Content to make scrollable (e.g. thumbnails of an image gallery)<br /><br /><span class='plugindraft-bold'>Documentation:</span><br />A detailed documentation can be found on <span class='plugindraft-italic'>www.devmount.de </span> (link above).
+on_devmount                                    = on devmount.de
 admin_header                                   = {PARAM1} Plugin Configuration
 admin_navigation                               = Navigation
 admin_loop                                     = Loop

@@ -9,7 +9,7 @@
  *
  * @category PHP
  * @package  PHP_MoziloPlugins
- * @author   HPdesigner <mail@devmount.de>
+ * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL
  * @version  GIT: v0.1.2014-06-18
  * @link     https://github.com/devmount/ContentScroll
@@ -33,7 +33,7 @@ if (!defined('IS_CMS')) {
  *
  * @category PHP
  * @package  PHP_MoziloPlugins
- * @author   HPdesigner <mail@devmount.de>
+ * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL
  * @link     https://github.com/devmount/ContentScroll
  */
@@ -44,12 +44,13 @@ class ContentScroll extends Plugin
     private $_cms_lang;
 
     // plugin information
-    const PLUGIN_AUTHOR  = 'HPdesigner';
-    const PLUGIN_DOCU
-        = 'http://devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html';
+    const PLUGIN_AUTHOR  = 'DEVMOUNT';
     const PLUGIN_TITLE   = 'ContentScroll';
     const PLUGIN_VERSION = 'v0.1.2014-06-18';
     const MOZILO_VERSION = '2.0';
+    const PLUGIN_DOCU
+        = 'http://devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html';
+
     private $_plugin_tags = array(
         'tag1' => '{ContentScroll|<height>|<content>}',
     );
@@ -480,7 +481,11 @@ class ContentScroll extends Plugin
                 htmlspecialchars($this->_plugin_tags['tag1'])
             ),
             self::PLUGIN_AUTHOR,
-            self::PLUGIN_DOCU,
+            array(
+                self::PLUGIN_DOCU,
+                self::PLUGIN_TITLE . ' '
+                . $this->_admin_lang->getLanguageValue('on_devmount')
+            ),
             $tags
         );
 
