@@ -12,7 +12,7 @@
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL
  * @version  GIT: v0.1.2014-06-18
- * @link     https://github.com/devmount/ContentScroll
+ * @link     https://github.com/devmount-mozilo/ContentScroll
  * @link     http://devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html
  * @see      And the peace of God, which transcends all understanding, will guard
  *           your hearts and your minds in Christ Jesus.
@@ -35,7 +35,7 @@ if (!defined('IS_CMS')) {
  * @package  PHP_MoziloPlugins
  * @author   DEVMOUNT <mail@devmount.de>
  * @license  GPL
- * @link     https://github.com/devmount/ContentScroll
+ * @link     https://github.com/devmount-mozilo/ContentScroll
  */
 class ContentScroll extends Plugin
 {
