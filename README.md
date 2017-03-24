@@ -16,7 +16,7 @@ Installing a plugin manually requires FTP Access.
 - Go to the backend tab *Plugins* and activate the now listed new ContentScroll plugin
 
 ## Syntax
-```{ContentScroll|<height>|<content>}```
+    {ContentScroll|<height>|<content>}
 Inserts the scrollalble content.
 
 1. Parameter ```<height>```: Height of content slider in px
@@ -27,4 +27,4 @@ This Plugin is distributed under *GNU General Public License, Version 3* (see LI
 
 ## Documentation
 A detailed documentation and demo can be found on DEVMOUNT's website:
-http://devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html
+http://t.devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html
