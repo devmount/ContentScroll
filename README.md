@@ -26,5 +26,5 @@ Inserts the scrollalble content.
 This Plugin is distributed under *GNU General Public License, Version 3* (see LICENSE) or, at your choice, any further version.
 
 ## Documentation
-A detailed documentation and demo can be found on DEVMOUNT's website:
+A detailed documentation and demo can be found here:
 http://t.devmount.de/Develop/moziloCMS/Plugins/ContentScroll.html
